@@ -1,6 +1,6 @@
 {
   "name": "pareto-resource-typescript-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Corno",
   "license": "Apache-2.0",
   "description": "a library that provides the TypeScript parser as a resource in the Pareto programming language",
