@@ -2,9 +2,9 @@ import * as p_ from 'pareto-core/interface/resource'
 
 import { $$ as q_parse_file } from "./queries/parse_file.js"
 
-export const $: p_.Resource = {
+export const $ = {
     'commands': {},
     'queries': {
         'parse file': q_parse_file,
     }
-}
+} satisfies p_.Resource
