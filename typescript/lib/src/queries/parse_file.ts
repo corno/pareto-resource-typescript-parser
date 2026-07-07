@@ -38,7 +38,10 @@ export const $$: resources.queries.parse_file = p_.query(($, on_value, on_error)
 
 
     const host: ts.CompilerHost = {
-        getSourceFile: (name) => (name === dummy_fileName ? sourceFile : undefined),
+        getSourceFile: (name) => (name === dummy_fileName
+            ? sourceFile
+            : undefined
+        ),
         getDefaultLibFileName: () => "lib.d.ts",
         writeFile: () => { },
         getCurrentDirectory: () => "",
@@ -55,7 +58,10 @@ export const $$: resources.queries.parse_file = p_.query(($, on_value, on_error)
     if (program.getSyntacticDiagnostics().length > 0) {
         on_error(['syntax errors', {
             'messages': p_.literal.list(
-                program.getSyntacticDiagnostics().map(($): string => typeof $.messageText === "string" ? $.messageText : $.messageText.messageText)
+                program.getSyntacticDiagnostics().map(($): string => typeof $.messageText === "string"
+                    ? $.messageText
+                    : $.messageText.messageText
+                )
             )
         }])
         return
