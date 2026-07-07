@@ -1,0 +1,37 @@
+{
+  "name": "pareto-resource-typescript-parser",
+  "version": "0.1.0",
+  "author": "Corno",
+  "license": "Apache-2.0",
+  "description": "a library that provides the TypeScript parser as a resource in the Pareto programming language",
+  "keywords": [],
+  "homepage": "https://github.com/corno/pareto-resource-typescript-parser#readme",
+  "bugs": {
+    "url": "https://github.com/corno/pareto-resource-typescript-parser/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corno/pareto-resource-typescript-parser.git"
+  },
+  "type": "module",
+  "exports": {
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "documentation"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "pareto-core": "^0.1.0",
+    "pareto-untyped-syntax-tree-api": "^0.1.0",
+    "typescript": "^6.0.0"
+  }
+}

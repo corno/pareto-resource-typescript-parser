@@ -1,0 +1,9 @@
+/out
+/typescript/app/dist
+/typescript/app/node_modules
+/typescript/lib/dist
+/typescript/lib/node_modules
+/typescript/test/dist
+/typescript/test/node_modules
+/temp
+/tools/node_modules
