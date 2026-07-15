@@ -1,11 +1,12 @@
 import * as p_ from 'pareto-core/implementation/resource'
 import * as p_id from 'pareto-core/interface/data'
+import p_text_from_list from 'pareto-core/implementation/transformer/specials/text_from_list'
 
 //interface
 import * as resources from "pareto-untyped-syntax-tree-api/interface/queries"
 
 //data types
-import * as d_ast from "pareto-untyped-syntax-tree-api/interface/data/untyped_syntax_tree"
+import * as d_ast from "pareto-untyped-syntax-tree-api/interface/schemas/untyped_syntax_tree"
 
 //dependencies
 import * as ts from "typescript"
@@ -25,7 +26,10 @@ export const $$: resources.queries.parse_file = p_.query(($, on_value, on_error)
 
     const dummy_fileName = "input.ts"
 
-    const data = $.data
+    const data = p_text_from_list( 
+        $.data,
+        ($) => $
+    )
 
     // Read the file and parse it with TypeScript
     const sourceFile = ts.createSourceFile(
