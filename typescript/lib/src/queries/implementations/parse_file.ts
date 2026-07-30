@@ -3,10 +3,10 @@ import * as p_id from 'pareto-core/interface/data'
 import p_text_from_list from 'pareto-core/implementation/transformer/specials/text_from_list'
 
 //interface
-import * as resources from "pareto-untyped-syntax-tree-api/interface/queries"
+import * as resources from "pareto-untyped-syntax-tree-api/queries/interfaces"
 
 //data types
-import * as d_ast from "pareto-untyped-syntax-tree-api/interface/schemas/untyped_syntax_tree"
+import * as d_ast from "pareto-untyped-syntax-tree-api/schemas/untyped_syntax_tree/schema"
 
 //dependencies
 import * as ts from "typescript"
