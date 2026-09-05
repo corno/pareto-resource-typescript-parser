@@ -1,6 +1,6 @@
-import * as p_ from 'pareto-core/implementation/resource'
-import * as p_id from 'pareto-core/interface/data'
-import p_text_from_list from 'pareto-core/implementation/transformer/specials/text_from_list'
+import * as p_ from 'pareto-core/resource'
+import * as p_id from 'pareto-core/schema'
+import p_text_from_list from 'pareto-core/transformer/specials/text_from_list'
 
 //interface
 import * as resources from "pareto-untyped-syntax-tree-api/queries/interfaces"
@@ -11,7 +11,7 @@ import * as d_ast from "pareto-untyped-syntax-tree-api/schemas/untyped_syntax_tr
 //dependencies
 import * as ts from "typescript"
 
-export const $$: resources.queries.parse_file = p_.query(($, on_value, on_error) => {
+export const $$: resources.parse_file = p_.query(($, on_value, on_error) => {
     // Cache for enum members sorted by value - returns primary names instead of aliases
     const syntaxKindMembers: Array<[number, string]> = (() => {
         const result: Array<[number, string]> = []
